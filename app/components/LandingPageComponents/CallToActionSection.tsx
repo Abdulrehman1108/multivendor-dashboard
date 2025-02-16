@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import AppStoreBadge from '../../assets/images/appStore.svg';
-import GooglePlayBadge from '../../assets/images/playStore.svg';
+import GooglePlayBadge from '../../assets/images/playstore.svg';
 import PhonesMockup from '../../assets/images/DoubleMobile.png';
 
 const CallToActionSection: React.FC = () => {
@@ -49,7 +49,7 @@ const CallToActionSection: React.FC = () => {
 
             {/* App Store Buttons */}
             <div className="flex items-center flex-wrap gap-4">
-              <a href="#" className="w-[160px] h-[48px] relative">
+              <a href="#" className="w-[160px] h-[155px] relative">
                 <Image
                   src={GooglePlayBadge}
                   alt="Get it on Google Play"

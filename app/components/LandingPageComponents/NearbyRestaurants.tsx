@@ -9,6 +9,7 @@ import { InputText } from "primereact/inputtext";
 import { Rating } from "primereact/rating";
 import { Card } from "primereact/card";
 import { CiGps } from "react-icons/ci";
+import { IoClose } from "react-icons/io5";
 import {
   GoogleMap,
   Marker,
@@ -222,11 +223,19 @@ const NearbyRestaurants: React.FC = () => {
                         onChange={(e) => setLocationDetails(e.target.value)}
                         className="w-full pl-12 pr-4 py-3 rounded-l-lg"
                       />
+                      {locationDetails && (
+    <Button
+      onClick={() => setLocationDetails("")}
+      className="p-button-text p-button-rounded absolute right-2 top-1/2 -translate-y-1/2 z-20"
+    >
+      <IoClose className="text-gray-500 hover:text-gray-700 text-xl" />
+    </Button>
+  )}
                     </span>
                     <Button
                       label="FIND RESTAURANTS"
                       onClick={handleFindRestaurants}
-                      className="inline-flex whitespace-nowrap px-6 py-3 bg-green-400 hover:bg-green-500 border-none text-black font-semibold rounded-r-lg"
+                      className="inline-flex whitespace-nowrap px-6 py-4 bg-green-400 hover:bg-green-500 border-none text-black font-semibold rounded-r-lg sm:text-sm"
                     />
                   </div>
                 </div>
